@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.GetDataActivity.GetDataActivity">
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/age_hint"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/heightEditText"
+        />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/height_hint"
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@+id/ageEditText"
+        app:layout_constraintTop_toBottomOf="@+id/heightTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/weightEditText"
+        />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="@string/weight_hint"
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@+id/heightEditText"
+        app:layout_constraintTop_toBottomOf="@+id/weightTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/genderTextView"
+        tools:ignore="MissingConstraints"
+        >
+        <RadioButton
+            android:id="@+id/maleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/gender_male"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/femaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/gender_female"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/PATextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PA_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/heightEditText"
+        app:layout_constraintLeft_toLeftOf="@+id/heightEditText"
+        />
+
+    <RadioGroup
+        android:id="@+id/PAGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/PATextView"
+        app:layout_constraintLeft_toLeftOf="@+id/heightEditText"
+        tools:ignore="MissingConstraints"
+        >
+        <RadioButton
+            android:id="@+id/PA0Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/PA_low"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/PA1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/PA_batter_low"
+            />
+
+        <RadioButton
+            android:id="@+id/PA2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/PA_appropriate"
+            />
+
+        <RadioButton
+            android:id="@+id/PA3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:text="@string/PA_height"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/diseaseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disease_label"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/weightEditText"
+        app:layout_constraintLeft_toLeftOf="@+id/weightEditText"
+        />
+
+    <CheckBox
+        android:id="@+id/disease0Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disease_0"
+        app:layout_constraintLeft_toLeftOf="@id/diseaseTextView"
+        app:layout_constraintTop_toBottomOf="@id/diseaseTextView"
+        tools:ignore="MissingConstraints"
+        />
+
+    <CheckBox
+        android:id="@+id/disease1Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disease_1"
+        app:layout_constraintLeft_toLeftOf="@id/disease0Check"
+        app:layout_constraintTop_toBottomOf="@id/disease0Check"
+        tools:ignore="MissingConstraints"
+        />
+
+    <CheckBox
+        android:id="@+id/disease2Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disease_2"
+        app:layout_constraintLeft_toLeftOf="@id/disease1Check"
+        app:layout_constraintTop_toBottomOf="@id/disease1Check"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Button
+        android:id="@+id/basicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_page"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/PAGroup"
+        app:layout_constraintLeft_toLeftOf="@+id/PAGroup"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

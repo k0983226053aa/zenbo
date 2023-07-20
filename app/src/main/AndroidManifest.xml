@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cych.cychzenbo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".allinterface.GlobalVariable"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.ShowResultActivity.ShowResultActivity"></activity>
+        <activity android:name=".view.Breakfast.BreakfastActivity"></activity>
+        <activity android:name=".view.GetDataActivity.GetDataActivity" />
+
+        <meta-data
+            android:name="zenbo_ds_domainuuid"
+            android:value="C5340CD0E81E41BE82D6E154F12BEC7A" />
+        <meta-data
+            android:name="zenbo_ds_version_C5340CD0E81E41BE82D6E154F12BEC7A"
+            android:value="0.0.1" />
+
+        <activity android:name=".view.MainActivity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.asus.intent.category.ZENBO" />
+                <category android:name="com.asus.intent.category.ZENBO_LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
